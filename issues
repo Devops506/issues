@@ -4,3 +4,5 @@ sudo setsebool -P httpd_can_network_connect 1 -- permission issue in nginx
 kubectl create secret docker-registry regcred --docker-server=https://index.docker.io/v1/ --docker-username=<your-name> --docker-password=<your-password> --docker-email=<your-email>
 imagePullSecrets:
   - name: regcred
+
+cat cloudopslabs_com.crt > cloudopslabs_com_chain.crt ; echo >> cloudopslabs_com_chain.crt ; cat cloudopslabs_com.ca-bundle >> cloudopslabs_com_chain.crt
